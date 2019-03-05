@@ -1,8 +1,7 @@
-package com.student.logistics.pojo.vo;
+package com.student.accounting.pojo.vo;
 
 /**
- * @author ZhongLiang.Xian
- * @ description: 用户视图实体类 使用lombok注解省略getter/setter方法
+ * @author mapeng
  * @ date: 2019/3/2.
  */
 public class UserVo {
@@ -10,14 +9,15 @@ public class UserVo {
     private String account;
     private String name;
     private String password;
-    private Integer position;
-    private String idCard;
+    private String position;
+    private String idcard;
     private String phone;
-    private int status;
-    private String address;
-    private String positionName;
-    private String deptName;
-    private Integer deptId;
+    private Integer status;
+    private String accountMoney;
+    private String roleId;
+    private Integer isDelete;
+    private String createTime;
+    private String updateTime;
 
     public int getId() {
         return id;
@@ -51,20 +51,20 @@ public class UserVo {
         this.password = password;
     }
 
-    public Integer getPosition() {
+    public String getPosition() {
         return position;
     }
 
-    public void setPosition(Integer position) {
+    public void setPosition(String position) {
         this.position = position;
     }
 
-    public String getIdCard() {
-        return idCard;
+    public String getIdcard() {
+        return idcard;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public void setIdcard(String idcard) {
+        this.idcard = idcard;
     }
 
     public String getPhone() {
@@ -83,35 +83,43 @@ public class UserVo {
         this.status = status;
     }
 
-    public String getAddress() {
-        return address;
+    public String getAccountMoney() {
+        return accountMoney;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAccountMoney(String accountMoney) {
+        this.accountMoney = accountMoney;
     }
 
-    public String getPositionName() {
-        return positionName;
+    public String getRoleId() {
+        return roleId;
     }
 
-    public void setPositionName(String positionName) {
-        this.positionName = positionName;
+    public void setRoleId(String roleId) {
+        this.roleId = roleId;
     }
 
-    public String getDeptName() {
-        return deptName;
+    public Integer getIsDelete() {
+        return isDelete;
     }
 
-    public void setDeptName(String deptName) {
-        this.deptName = deptName;
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
     }
 
-    public Integer getDeptId() {
-        return deptId;
+    public String getCreateTime() {
+        return createTime;
     }
 
-    public void setDeptId(Integer deptId) {
-        this.deptId = deptId;
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 }

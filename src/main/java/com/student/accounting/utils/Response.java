@@ -1,4 +1,4 @@
-package com.student.logistics.utils;
+package com.student.accounting.utils;
 
 import java.io.Serializable;
 

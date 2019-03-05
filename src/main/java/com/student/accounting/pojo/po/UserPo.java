@@ -1,29 +1,32 @@
-package com.student.logistics.pojo.po;
+package com.student.accounting.pojo.po;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 /**
- * @author ZhongLiang.Xian
+ * @author mapeng
  * @ description:
- * @ date: 2019/3/2.
+ * @ date: 2019/3/5.
  */
 @Entity
-@Table(name = "user", schema = "logistics_manager", catalog = "")
+@Table(name = "user", schema = "accounting_manager", catalog = "")
 public class UserPo {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String account;
     private String name;
     private String password;
-    private Integer position;
-    private String idCard;
+    private String position;
+    private String idcard;
     private String phone;
     private int status;
-    private String address;
+    private String accountMoney;
+    private String roleId;
+    private Integer isDelete;
+    private String createTime;
+    private String updateTime;
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
@@ -32,8 +35,6 @@ public class UserPo {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "account")
     public String getAccount() {
         return account;
     }
@@ -42,8 +43,6 @@ public class UserPo {
         this.account = account;
     }
 
-    @Basic
-    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -52,8 +51,6 @@ public class UserPo {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "password")
     public String getPassword() {
         return password;
     }
@@ -62,28 +59,22 @@ public class UserPo {
         this.password = password;
     }
 
-    @Basic
-    @Column(name = "position")
-    public Integer getPosition() {
+    public String getPosition() {
         return position;
     }
 
-    public void setPosition(Integer position) {
+    public void setPosition(String position) {
         this.position = position;
     }
 
-    @Basic
-    @Column(name = "id_card")
-    public String getIdCard() {
-        return idCard;
+    public String getIdcard() {
+        return idcard;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public void setIdcard(String idcard) {
+        this.idcard = idcard;
     }
 
-    @Basic
-    @Column(name = "phone")
     public String getPhone() {
         return phone;
     }
@@ -92,8 +83,6 @@ public class UserPo {
         this.phone = phone;
     }
 
-    @Basic
-    @Column(name = "status")
     public int getStatus() {
         return status;
     }
@@ -102,35 +91,43 @@ public class UserPo {
         this.status = status;
     }
 
-    @Basic
-    @Column(name = "address")
-    public String getAddress() {
-        return address;
+    public String getAccountMoney() {
+        return accountMoney;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAccountMoney(String accountMoney) {
+        this.accountMoney = accountMoney;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        UserPo userPo = (UserPo) o;
-        return id == userPo.id &&
-                status == userPo.status &&
-                Objects.equals(account, userPo.account) &&
-                Objects.equals(name, userPo.name) &&
-                Objects.equals(password, userPo.password) &&
-                Objects.equals(position, userPo.position) &&
-                Objects.equals(idCard, userPo.idCard) &&
-                Objects.equals(phone, userPo.phone) &&
-                Objects.equals(address, userPo.address);
+    public String getRoleId() {
+        return roleId;
     }
 
-    @Override
-    public int hashCode() {
+    public void setRoleId(String roleId) {
+        this.roleId = roleId;
+    }
 
-        return Objects.hash(id, account, name, password, position, idCard, phone, status, address);
+    public Integer getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 }

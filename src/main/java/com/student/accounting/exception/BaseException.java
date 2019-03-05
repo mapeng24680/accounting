@@ -1,4 +1,4 @@
-package com.student.logistics.exception;
+package com.student.accounting.exception;
 
 /**
  * 异常类
